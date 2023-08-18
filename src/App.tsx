@@ -45,7 +45,6 @@ const NotFound = () => {
 
 /**
  * TODO:
- *  - Replace "Mapa del sitio" in Footer.tsx.
  *  - Better images.
  *  - Responsiveness.
  *  - Make everything prettier.

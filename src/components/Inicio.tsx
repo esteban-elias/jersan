@@ -1,10 +1,10 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import portadaImg from '/inicio/portada.png';
-import misionImg from '/inicio/mision.jpg';
-import visionImg from '/inicio/vision.jpg';
-import propositoImg from '/inicio/proposito.jpg';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import portadaImg from "/inicio/portada.png";
+import misionImg from "/inicio/mision.jpg";
+import visionImg from "/inicio/vision.jpg";
+import propositoImg from "/inicio/proposito.jpg";
 
 const Inicio = () => {
   return (
@@ -34,11 +34,10 @@ const Inicio = () => {
           </Col>
           <Col>
             <Article title="Visión">
-              Aspiramos a ser una constructora de reconocido compromiso
-              social. A través de hogares sostenibles, buscamos no sólo
-              reducir el impacto ambiental, sino también reintegrar a
-              las personas a la sociedad, brindándoles dignidad y
-              bienestar.
+              Aspiramos a ser una constructora de reconocido social. A
+              través de hogares sostenibles, buscamos no sólo reducir el
+              impacto ambiental, sino también reintegrar las personas a
+              la sociedad, brindándoles dignidad y bienestar.
             </Article>
           </Col>
         </Row>
@@ -79,7 +78,12 @@ interface ImgProps {
 }
 
 const Img = ({ src, alt }: ImgProps) => (
-  <img className=" w-100 p-5" src={src} alt={alt} style={{height: '300px', objectFit: 'cover'}}/>
+  <img
+    className=" w-100 p-5"
+    src={src}
+    alt={alt}
+    style={{ height: "300px", objectFit: "cover" }}
+  />
 );
 
 export default Inicio;

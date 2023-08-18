@@ -6,9 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Footer = () => {
   return (
     <footer className="bg-dark text-white mt-5 pt-5">
-      <Container >
+      <Container>
         <Row>
-          <Col>
+          <Col className="d-flex flex-column align-items-center">
             <h4 className="mb-3">Contacto</h4>
             <ul className="list-unstyled">
               <li>
@@ -27,7 +27,7 @@ const Footer = () => {
               </li>
             </ul>
           </Col>
-          <Col>
+          <Col className="d-flex flex-column align-items-center">
             <h4 className="mb-3">Redes sociales</h4>
             <ul className="list-unstyled">
               <li>
@@ -47,20 +47,13 @@ const Footer = () => {
               </li>
             </ul>
           </Col>
-          <Col>
-            <h4 className="mb-3">Mapa del sitio</h4>
+          <Col className="d-flex flex-column align-items-center">
+            <h4 className='mb-3'>Información</h4>
             <ul className="list-unstyled">
+              <li>Precio UF: $30.000</li>
+              <li>Precio Dólar: $864</li>
               <li>
-                <a href="/">Inicio</a>
-              </li>
-              <li>
-                <a href="/nosotros">Nosotros</a>
-              </li>
-              <li>
-                <a href="/productos">Productos</a>
-              </li>
-              <li>
-                <a href="/contacto">Contacto</a>
+                <span>Jersan© 2023 Todos los derechos reservados.</span>
               </li>
             </ul>
           </Col>
