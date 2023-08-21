@@ -1,10 +1,10 @@
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import portadaImg from "/inicio/portada.png";
-import misionImg from "/inicio/mision.jpg";
-import visionImg from "/inicio/vision.jpg";
-import propositoImg from "/inicio/proposito.jpg";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import portadaImg from '/inicio/portada.png';
+import misionImg from '/inicio/mision.jpg';
+import visionImg from '/inicio/vision.jpg';
+import propositoImg from '/inicio/proposito.jpg';
 
 const Inicio = () => {
   return (
@@ -44,11 +44,10 @@ const Inicio = () => {
         <Row className="d-flex align-items-center">
           <Col>
             <Article title="Propósito">
-              Buscamos trascender en la construcción, impulsando una
-              economía circular mediante alianzas y reutilización de
-              materiales. Como agentes de cambio, abordamos la falta de
-              viviendas, otorgando hogares seguros y mejorando la
-              calidad de vida con compromiso y responsabilidad.
+              Buscamos impulsar una economía circular en la construcción
+              mediante alianzas y reutilización de materiales. Como
+              agentes de cambio, otorgamos hogares seguros y elevamos la
+              calidad de vida con responsabilidad.
             </Article>
           </Col>
           <Col>
@@ -82,7 +81,7 @@ const Img = ({ src, alt }: ImgProps) => (
     className="w-100 rounded shadow"
     src={src}
     alt={alt}
-    style={{ height: "300px", objectFit: "cover" }}
+    style={{ height: '300px', objectFit: 'cover' }}
   />
 );
 
