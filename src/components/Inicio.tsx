@@ -10,12 +10,12 @@ const Inicio = () => {
   return (
     <>
       <img
-        className="w-100"
+        className="w-100 mb-4"
         src={portadaImg}
         alt="Viviendas de emergencia"
       />
       <Container>
-        <Row className="d-flex align-items-center my-5">
+        <Row className="d-flex align-items-center mb-4">
           <Col>
             <Article title="Misión">
               Nuestra misión es edificar viviendas dignas, priorizando
@@ -28,7 +28,7 @@ const Inicio = () => {
             <Img src={misionImg} alt="Viviendas de emergencia" />
           </Col>
         </Row>
-        <Row className="d-flex align-items-center mb-5">
+        <Row className="d-flex align-items-center mb-4">
           <Col>
             <Img src={visionImg} alt="Viviendas de emergencia" />
           </Col>

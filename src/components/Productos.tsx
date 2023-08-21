@@ -11,14 +11,14 @@ import capitalHumanoImg from '/productos/capital-humano.jpg';
 const Productos = () => {
   return (
     <>
-      <img className="w-100" src={portadaImg} alt="Equipo de trabajo" />
+      <img className="w-100 mb-4" src={portadaImg} alt="Equipo de trabajo" />
       <Container>
-        <Row className='mt-5 mb-4'>
+        <Row className='mb-3'>
           <Col>
             <h1 className="text-center">Enfoque</h1>
           </Col>
         </Row>
-        <Row>
+        <Row className='mb-5'>
           <Col>
             <CustomCard title="Reciclaje" imgSrc={reciclajeImg}>
               El reciclaje
@@ -41,7 +41,7 @@ const Productos = () => {
             </CustomCard>
           </Col>
         </Row>
-        <Row className='mt-5 mb-4'>
+        <Row className='mb-3'>
           <Col>
             <h1 className="text-center">Proyectos</h1>
           </Col>

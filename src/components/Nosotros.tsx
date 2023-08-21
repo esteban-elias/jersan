@@ -16,9 +16,9 @@ const Nosotros = () => {
 
   return (
     <>
-      <img className="w-100" src={portadaImg} alt="Equipo de trabajo" />
+      <img className="w-100 mb-4" src={portadaImg} alt="Equipo de trabajo" />
       <Container>
-        <Row className="mt-5">
+        <Row>
           <Col sm={4}>
             <ListGroup variant="flush" className="w-50">
               <ListItem
