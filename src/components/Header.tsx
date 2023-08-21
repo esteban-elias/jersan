@@ -11,6 +11,7 @@ const Header = () => {
       collapseOnSelect
       expand="lg"
       sticky="top"
+      className='shadow'
       style={{ backgroundColor: '#FFFFFF', padding: '0px' }}
     >
       <Container fluid>
