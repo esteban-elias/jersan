@@ -9,7 +9,7 @@ const Footer = () => {
       <Container>
         <Row>
           <Col className="d-flex flex-column align-items-center">
-            <h4 className="mb-3">Contacto</h4>
+            <h4>Contacto</h4>
             <ul className="list-unstyled">
               <li>
                 <FontAwesomeIcon icon="map-marker-alt" /> Arturo Prat
@@ -28,7 +28,7 @@ const Footer = () => {
             </ul>
           </Col>
           <Col className="d-flex flex-column align-items-center">
-            <h4 className="mb-3">Redes sociales</h4>
+            <h4>Redes sociales</h4>
             <ul className="list-unstyled">
               <li>
                 <a href="https://www.facebook.com/jersan.cl">
@@ -48,7 +48,7 @@ const Footer = () => {
             </ul>
           </Col>
           <Col className="d-flex flex-column align-items-center">
-            <h4 className='mb-3'>Información</h4>
+            <h4>Información</h4>
             <ul className="list-unstyled">
               <li>UF: $30.000</li>
               <li>Dólar: $864</li>
