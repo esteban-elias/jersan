@@ -15,7 +15,7 @@ const Inicio = () => {
         alt="Viviendas de emergencia"
       />
       <Container>
-        <Row className="d-flex align-items-center mt-5">
+        <Row className="d-flex align-items-center my-5">
           <Col>
             <Article title="Misión">
               Nuestra misión es edificar viviendas dignas, priorizando
@@ -28,7 +28,7 @@ const Inicio = () => {
             <Img src={misionImg} alt="Viviendas de emergencia" />
           </Col>
         </Row>
-        <Row className="d-flex align-items-center my-3">
+        <Row className="d-flex align-items-center mb-5">
           <Col>
             <Img src={visionImg} alt="Viviendas de emergencia" />
           </Col>
@@ -66,9 +66,9 @@ interface ArticleProps {
 }
 
 const Article = ({ title, children }: ArticleProps) => (
-  <article className="p-5">
+  <article>
     <h2 className="text-center">{title}</h2>
-    <p className="px-5">{children}</p>
+    <p className="px-lg-5">{children}</p>
   </article>
 );
 
@@ -79,7 +79,7 @@ interface ImgProps {
 
 const Img = ({ src, alt }: ImgProps) => (
   <img
-    className=" w-100 p-5"
+    className="w-100 rounded shadow"
     src={src}
     alt={alt}
     style={{ height: "300px", objectFit: "cover" }}
