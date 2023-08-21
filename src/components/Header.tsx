@@ -1,40 +1,45 @@
+import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link, useLocation } from 'react-router-dom';
 import jersanLogo from './../assets/jersan.svg';
 
 const Header = () => {
+  const location = useLocation();
   return (
     <Navbar
+      collapseOnSelect
       expand="lg"
       sticky="top"
-      collapseOnSelect
       style={{ backgroundColor: '#FFFFFF', padding: '0px' }}
     >
-      <Navbar.Brand as={Link} to="/" style={{ padding: '0px' }}>
-        <img
-          alt="Logo de Jersan"
-          src={jersanLogo}
-          width="80px"
-          height="80px"
-          style={{ marginLeft: '50px' }}
-        />
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="navbar" />
-      <Navbar.Collapse
-        id="navbar"
-        style={{ display: 'flex', flexDirection: 'row' }}
-      >
-        <Nav
-          variant="underline"
-          style={{ marginLeft: 'auto', marginRight: '50px' }}
-        >
-          <NavItem to="/">INICIO</NavItem>
-          <NavItem to="/nosotros">QUIÉNES SOMOS</NavItem>
-          <NavItem to="/productos">NUESTROS PRODUCTOS</NavItem>
-          <NavItem to="/contacto">CONTÁCTANOS</NavItem>
-        </Nav>
-      </Navbar.Collapse>
+      <Container fluid>
+        <Navbar.Brand as={Link} to="/" style={{ padding: '0px' }}>
+          <img
+            alt="Logo de Jersan"
+            src={jersanLogo}
+            width="80px"
+            height="80px"
+            style={{ marginLeft: '50px' }}
+          />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav
+            variant="underline"
+            style={{ marginLeft: 'auto', marginRight: '50px' }}
+            activeKey={location.pathname}
+          >
+            <NavItem to="/">INICIO</NavItem>
+            <NavItem to="/nosotros">QUIÉNES SOMOS</NavItem>
+            <NavItem to="/productos">NUESTROS PRODUCTOS</NavItem>
+            <NavItem to="/contacto">CONTÁCTANOS</NavItem>
+            {/* <Nav.Link eventKey="/" as={Link} to="/">
+              INICIO
+            </Nav.Link> */}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
     </Navbar>
   );
 };
@@ -45,12 +50,11 @@ interface NavItemProps {
 }
 
 const NavItem = ({ to, children }: NavItemProps) => {
-  const location = useLocation();
   return (
     <Nav.Link
       as={Link}
       to={to}
-      active={location.pathname === to}
+      eventKey={to}
       style={{ color: '#333C4A' }}
     >
       {children}

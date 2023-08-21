@@ -50,8 +50,8 @@ const Footer = () => {
           <Col className="d-flex flex-column align-items-center">
             <h4 className='mb-3'>Información</h4>
             <ul className="list-unstyled">
-              <li>Precio UF: $30.000</li>
-              <li>Precio Dólar: $864</li>
+              <li>UF: $30.000</li>
+              <li>Dólar: $864</li>
               <li>
                 <span>Jersan© 2023 Todos los derechos reservados.</span>
               </li>

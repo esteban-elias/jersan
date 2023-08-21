@@ -45,6 +45,8 @@ const NotFound = () => {
 
 /**
  * TODO:
+ *  - Resulting HTML: Semantics, SEO, Accessibility.
+ *  - Images to S3.
  *  - Better images.
  *  - Responsiveness.
  *  - Make everything prettier.
@@ -52,6 +54,8 @@ const NotFound = () => {
  *    of unexpected image dimensions.
  *  - Captcha.
  *  - Align list items of "Contacto.tsx" and apply colors.
+ *  - Ask for location permission and show the path to the user.
+ *  - Chatbot/AI search box as a the lead actor.
  */
 
 export default App;
