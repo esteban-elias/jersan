@@ -77,12 +77,14 @@ interface ImgProps {
 }
 
 const Img = ({ src, alt }: ImgProps) => (
-  <img
-    className="w-100 rounded shadow"
-    src={src}
-    alt={alt}
-    style={{ height: '300px', objectFit: 'cover' }}
-  />
-);
+  <div>
+    <img
+      className="w-100 p-lg-5"
+      src={src}
+      alt={alt}
+      style={{ height: '300px', objectFit: 'cover' }}
+    />
+  </div>
+)
 
 export default Inicio;
