@@ -11,17 +11,23 @@ import capitalHumanoImg from '/productos/capital-humano.jpg';
 const Productos = () => {
   return (
     <>
-      <img className="w-100 mb-4" src={portadaImg} alt="Equipo de trabajo" />
+      <img
+        className="w-100 mb-4"
+        src={portadaImg}
+        alt="Equipo de trabajo"
+      />
       <Container>
-        <Row className='mb-3'>
+        <Row className="mb-3">
           <Col>
             <h1 className="text-center">Enfoque</h1>
           </Col>
         </Row>
-        <Row className='mb-5'>
+        <Row className="mb-5">
           <Col>
             <CustomCard title="Reciclaje" imgSrc={reciclajeImg}>
-              El reciclaje
+              El reciclaje es esencial para reducir residuos, conservar
+              recursos y proteger el medio ambiente, impulsando un
+              futuro sostenible.
             </CustomCard>
           </Col>
           <Col>
@@ -29,7 +35,10 @@ const Productos = () => {
               title="Equidad de género"
               imgSrc={equidadGeneroImg}
             >
-              La equidad de género
+              La economía circular en techos en Chile promueve la
+              reutilización y el reciclaje, integrando energía
+              renovable. Involucrar a mujeres potencia productividad e
+              innovación en la empresa.
             </CustomCard>
           </Col>
           <Col>
@@ -37,11 +46,15 @@ const Productos = () => {
               title="Capital humano"
               imgSrc={capitalHumanoImg}
             >
-              El capital humano
+              La gestión adecuada de capital humano en la construcción
+              implica una planificación eficiente, considerando recursos
+              y plazos, garantizando seguridad y bienestar del equipo.
+              Es esencial para el éxito de los proyectos y la
+              productividad del personal.
             </CustomCard>
           </Col>
         </Row>
-        <Row className='mb-3'>
+        <Row className="mb-3">
           <Col>
             <h1 className="text-center">Proyectos</h1>
           </Col>
@@ -71,7 +84,7 @@ interface LittleCardProps {
 
 const CustomCard = ({ children, title, imgSrc }: LittleCardProps) => {
   return (
-    <Card className="mx-5 rounded-0">
+    <Card className="mx-5 rounded-0 shadow">
       <Card.Img className="rounded-0" variant="top" src={imgSrc} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
