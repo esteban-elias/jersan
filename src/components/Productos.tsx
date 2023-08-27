@@ -23,7 +23,7 @@ const Productos = () => {
           </Col>
         </Row>
         <Row className="mb-5">
-          <Col>
+          <Col className='mb-3 mb-sm-0'>
             <CustomCard title="Reciclaje" imgSrc={reciclajeImg}>
               El reciclaje es esencial para reducir residuos, conservar
               recursos y proteger el medio ambiente, impulsando un
@@ -62,14 +62,14 @@ const Productos = () => {
         <ProyectoRow
           title="Calle Pedro Aguirre Cerda"
           imgSrc={reciclajeImg}
+          alt="Proyecto Pedro Aguirre Cerda"
         >
           El trabajo en la calle Pedro Aguirre Cerda condujo a un
           desafío de ingeniería mayor. El objetivo era mejorar la
           eficiencia de la recolección de residuos en la calle. Para
           ello, se diseñó un sistema de recolección de residuos que
           consiste en un camión recolector de residuos y un sistema de
-          contenedores de residuos. El camión recolector de residuos es
-          ...
+          contenedores de residuos.
         </ProyectoRow>
       </Container>
     </>
@@ -97,29 +97,45 @@ const CustomCard = ({ children, title, imgSrc }: LittleCardProps) => {
 interface ProyectoRowProps {
   title: string;
   imgSrc: string;
+  alt: string;
   children: React.ReactNode;
 }
 
-const ProyectoRow = ({ title, imgSrc, children }: ProyectoRowProps) => {
+const ProyectoRow = ({
+  title,
+  imgSrc,
+  alt,
+  children,
+}: ProyectoRowProps) => {
   return (
-    <Row className="g-0 border">
-      <Col className="d-flex align-items-center">
-        <Card className="border-0 px-5">
+    <Row>
+      <Col>
+        <Card>
           <Card.Body>
-            <Card.Title className="text-center">{title}</Card.Title>
-            <Card.Text>{children}</Card.Text>
-            <div className="text-center">
-              <Button>Detalles</Button>
-            </div>
+            <Row>
+              <Col xs={12} sm={6}>
+                <img
+                  className="w-100 mb-2 "
+                  alt={alt}
+                  src={imgSrc}
+                />
+              </Col>
+              <Col
+                xs={12}
+                sm={6}
+                className="d-flex flex-column justify-content-center"
+              >
+                <Card.Title className="text-center mb-2">
+                  {title}
+                </Card.Title>
+                <Card.Text>{children}</Card.Text>
+                <div className="text-center">
+                  <Button>Detalles</Button>
+                </div>
+              </Col>
+            </Row>
           </Card.Body>
         </Card>
-      </Col>
-      <Col>
-        <img
-          className="w-100"
-          alt="Proyecto Pedro Aguirre Cerda"
-          src={imgSrc}
-        />
       </Col>
     </Row>
   );
