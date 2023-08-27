@@ -23,14 +23,14 @@ const Productos = () => {
           </Col>
         </Row>
         <Row className="mb-5">
-          <Col className='mb-3 mb-sm-0'>
+          <Col className="mb-3 mb-sm-0">
             <CustomCard title="Reciclaje" imgSrc={reciclajeImg}>
               El reciclaje es esencial para reducir residuos, conservar
               recursos y proteger el medio ambiente, impulsando un
               futuro sostenible.
             </CustomCard>
           </Col>
-          <Col>
+          <Col className="mb-3 mb-sm-0">
             <CustomCard
               title="Equidad de género"
               imgSrc={equidadGeneroImg}
@@ -41,7 +41,7 @@ const Productos = () => {
               innovación en la empresa.
             </CustomCard>
           </Col>
-          <Col>
+          <Col className="mb-3 mb-sm-0">
             <CustomCard
               title="Capital humano"
               imgSrc={capitalHumanoImg}
@@ -114,11 +114,7 @@ const ProyectoRow = ({
           <Card.Body>
             <Row>
               <Col xs={12} sm={6}>
-                <img
-                  className="w-100 mb-2 "
-                  alt={alt}
-                  src={imgSrc}
-                />
+                <img className="w-100 mb-2 " alt={alt} src={imgSrc} />
               </Col>
               <Col
                 xs={12}
