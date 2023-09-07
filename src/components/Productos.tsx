@@ -107,32 +107,28 @@ const ProyectoRow = ({
   children,
 }: ProyectoRowProps) => {
   return (
-    <Row>
-      <Col>
-        <Card>
-          <Card.Body>
-            <Row>
-              <Col xs={12} sm={6}>
-                <img className="w-100 mb-2 " alt={alt} src={imgSrc} />
-              </Col>
-              <Col
-                xs={12}
-                sm={6}
-                className="d-flex flex-column justify-content-center"
-              >
-                <Card.Title className="text-center mb-2">
-                  {title}
-                </Card.Title>
-                <Card.Text>{children}</Card.Text>
-                <div className="text-center">
-                  <Button>Detalles</Button>
-                </div>
-              </Col>
-            </Row>
-          </Card.Body>
-        </Card>
-      </Col>
-    </Row>
+    <Card>
+      <Card.Body>
+        <Row>
+          <Col xs={12} sm={6}>
+            <img className="w-100 mb-2 " alt={alt} src={imgSrc} />
+          </Col>
+          <Col
+            xs={12}
+            sm={6}
+            className="d-flex flex-column justify-content-center p-sm-5"
+          >
+            <Card.Title className="text-center mb-2">
+              {title}
+            </Card.Title>
+            <Card.Text>{children}</Card.Text>
+            <div className="text-center">
+              <Button>Detalles</Button>
+            </div>
+          </Col>
+        </Row>
+      </Card.Body>
+    </Card>
   );
 };
 
