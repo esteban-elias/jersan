@@ -5,14 +5,17 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Map, Marker } from 'pigeon-maps';
-import portadaImg from '/contacto/portada.png';
 
 const Contacto = () => {
   return (
     <>
-      <img className="w-100 mb-4" src={portadaImg} alt="Equipo de trabajo" />
+      <img
+        className="w-100 mb-4"
+        src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/contacto/portada.png"
+        alt="Equipo de trabajo"
+      />
       <Container>
-        <Row className='mb-4'>
+        <Row className="mb-4">
           <Col>
             <h1 className="text-center">Contacto</h1>
           </Col>

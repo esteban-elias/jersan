@@ -3,17 +3,13 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
-import portadaImg from '/productos/portada.png';
-import reciclajeImg from '/productos/reciclaje.jpg';
-import equidadGeneroImg from '/productos/equidad-genero.jpg';
-import capitalHumanoImg from '/productos/capital-humano.jpg';
 
 const Productos = () => {
   return (
     <>
       <img
         className="w-100 mb-4"
-        src={portadaImg}
+        src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/portada.png"
         alt="Equipo de trabajo"
       />
       <Container>
@@ -24,7 +20,10 @@ const Productos = () => {
         </Row>
         <Row className="mb-5">
           <Col className="mb-3 mb-sm-0">
-            <CustomCard title="Reciclaje" imgSrc={reciclajeImg}>
+            <CustomCard
+              title="Reciclaje"
+              imgSrc="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/reciclaje.jpg"
+            >
               El reciclaje es esencial para reducir residuos, conservar
               recursos y proteger el medio ambiente, impulsando un
               futuro sostenible.
@@ -33,7 +32,7 @@ const Productos = () => {
           <Col className="mb-3 mb-sm-0">
             <CustomCard
               title="Equidad de género"
-              imgSrc={equidadGeneroImg}
+              imgSrc="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/equidad-genero.jpg"
             >
               La economía circular en techos en Chile promueve la
               reutilización y el reciclaje, integrando energía
@@ -44,7 +43,7 @@ const Productos = () => {
           <Col className="mb-3 mb-sm-0">
             <CustomCard
               title="Capital humano"
-              imgSrc={capitalHumanoImg}
+              imgSrc="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/capital-humano.jpg"
             >
               La gestión adecuada de capital humano en la construcción
               implica una planificación eficiente, considerando recursos
@@ -61,7 +60,7 @@ const Productos = () => {
         </Row>
         <ProyectoRow
           title="Calle Pedro Aguirre Cerda"
-          imgSrc={reciclajeImg}
+          imgSrc="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/pedro-aguirre-cerda.jpg"
           alt="Proyecto Pedro Aguirre Cerda"
         >
           El trabajo en la calle Pedro Aguirre Cerda condujo a un

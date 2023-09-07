@@ -1,17 +1,13 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import portadaImg from '/inicio/portada.png';
-import misionImg from '/inicio/mision.jpg';
-import visionImg from '/inicio/vision.jpg';
-import propositoImg from '/inicio/proposito.jpg';
 
 const Inicio = () => {
   return (
     <>
       <img
         className="w-100 mb-4"
-        src={portadaImg}
+        src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/portada.png"
         alt="Viviendas de emergencia"
       />
       <Container>
@@ -25,12 +21,18 @@ const Inicio = () => {
             </Article>
           </Col>
           <Col>
-            <Img src={misionImg} alt="Viviendas de emergencia" />
+            <Img
+              src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/mision.jpg"
+              alt="Viviendas de emergencia"
+            />
           </Col>
         </Row>
         <Row className="d-flex align-items-center mb-4">
           <Col>
-            <Img src={visionImg} alt="Viviendas de emergencia" />
+            <Img
+              src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/vision.jpg"
+              alt="Viviendas de emergencia"
+            />
           </Col>
           <Col>
             <Article title="Visión">
@@ -51,7 +53,10 @@ const Inicio = () => {
             </Article>
           </Col>
           <Col>
-            <Img src={propositoImg} alt="Viviendas de emergencia" />
+            <Img
+              src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/proposito.jpg"
+              alt="Viviendas de emergencia"
+            />
           </Col>
         </Row>
       </Container>
@@ -85,6 +90,6 @@ const Img = ({ src, alt }: ImgProps) => (
       style={{ height: '300px', objectFit: 'cover' }}
     />
   </div>
-)
+);
 
 export default Inicio;

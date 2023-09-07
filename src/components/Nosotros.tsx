@@ -3,7 +3,6 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
-import portadaImg from '/nosotros/portada.png';
 
 const enum Item {
   Valores = 'valores',
@@ -18,7 +17,7 @@ const Nosotros = () => {
     <>
       <img
         className="w-100 mb-4"
-        src={portadaImg}
+        src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/nosotros/portada.png"
         alt="Equipo de trabajo"
       />
       <Container>
