@@ -23,7 +23,7 @@ const Nosotros = () => {
       <Container>
         <Row>
           <Col lg={4} className="d-flex justify-content-center mb-3">
-            <ListGroup variant="flush" className="w-50">
+            <ListGroup variant="flush" className="w-50 mb-3">
               <ListItem
                 item={Item.Valores}
                 activeItem={activeItem}
