@@ -34,10 +34,8 @@ const Header = () => {
             <NavItem to="/">INICIO</NavItem>
             <NavItem to="/nosotros">QUIÉNES SOMOS</NavItem>
             <NavItem to="/productos">NUESTROS PRODUCTOS</NavItem>
+            <NavItem to ="/modelo-negocio">MODELO DE NEGOCIO</NavItem>
             <NavItem to="/contacto">CONTÁCTANOS</NavItem>
-            {/* <Nav.Link eventKey="/" as={Link} to="/">
-              INICIO
-            </Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

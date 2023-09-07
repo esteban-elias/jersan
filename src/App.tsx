@@ -13,6 +13,7 @@ import Inicio from './components/Inicio';
 import Nosotros from './components/Nosotros';
 import Productos from './components/Productos';
 import Footer from './components/Footer';
+import ModeloNegocio from './components/ModeloNegocio';
 
 library.add(faEnvelope, faMapMarkerAlt, faPhoneAlt);
 
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/productos" element={<Productos />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/modelo-negocio" element={<ModeloNegocio />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
@@ -42,20 +44,5 @@ const NotFound = () => {
     </div>
   );
 };
-
-/**
- * TODO:
- *  - Resulting HTML: Semantics, SEO, Accessibility.
- *  - Images to S3.
- *  - Better images.
- *  - Responsiveness.
- *  - Make everything prettier.
- *  - Inconsistent image dimensions and lack of input handling
- *    of unexpected image dimensions.
- *  - Captcha.
- *  - Align list items of "Contacto.tsx" and apply colors.
- *  - Ask for location permission and show the path to the user.
- *  - Chatbot/AI search box as a the lead actor.
- */
 
 export default App;
