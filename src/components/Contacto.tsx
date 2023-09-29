@@ -5,8 +5,18 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Map, Marker } from 'pigeon-maps';
+import useImagePreloader from '../hooks/useImagePreloader';
+import Loading from './Loading';
 
 const Contacto = () => {
+  const isLoading = useImagePreloader([
+    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/contacto/portada.png',
+  ]);
+
+  if (isLoading) {
+    return <Loading/>
+  }
+
   return (
     <>
       <img

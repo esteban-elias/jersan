@@ -1,8 +1,18 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import useImagePreloader from '../hooks/useImagePreloader';
+import Loading from './Loading';
 
 const Inicio = () => {
+  const isLoading = useImagePreloader([
+    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/portada.png',
+  ]);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <>
       <img

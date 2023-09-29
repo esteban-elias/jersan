@@ -1,8 +1,19 @@
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import useImagePreloader from '../hooks/useImagePreloader';
+import Loading from './Loading';
 
 const ModeloNegocio = () => {
+  const isLoading = useImagePreloader([
+    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/modelo-negocio/portada.png',
+    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/modelo-negocio/canvas.png',
+  ]);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <>
       <img

@@ -3,8 +3,21 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
+import useImagePreloader from '../hooks/useImagePreloader';
+import Loading from './Loading';
 
 const Productos = () => {
+  const isLoading = useImagePreloader([
+    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/portada.png',
+    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/reciclaje.jpg',
+    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/equidad-genero.jpg',
+    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/capital-humano.jpg',
+  ]);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <>
       <img

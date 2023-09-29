@@ -3,6 +3,8 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
+import useImagePreloader from '../hooks/useImagePreloader';
+import Loading from './Loading';
 
 const enum Item {
   Valores = 'valores',
@@ -12,6 +14,14 @@ const enum Item {
 
 const Nosotros = () => {
   const [activeItem, setActiveItem] = useState(Item.Valores);
+
+  const isLoading = useImagePreloader([
+    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/nosotros/portada.png',
+  ]);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <>
