@@ -16,12 +16,15 @@ const Inicio = () => {
   return (
     <>
       <img
-        className="w-100 mb-4"
+        className="w-100 mb-5"
         src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/portada.png"
         alt="Viviendas de emergencia"
       />
       <Container>
-        <Row className="d-flex align-items-center mb-4">
+        <Row
+          className="d-flex align-items-center"
+          style={{ marginBottom: 100 }}
+        >
           <Col>
             <Article title="Misión">
               Nuestra misión es edificar viviendas dignas, priorizando
@@ -30,15 +33,21 @@ const Inicio = () => {
               diferencia tangible en sus vidas.
             </Article>
           </Col>
-          <Col>
+          <Col
+            xs={{ span: 12, order: 'first' }}
+            lg={{ span: 6, order: 'last' }}
+          >
             <Img
               src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/mision.jpg"
               alt="Viviendas de emergencia"
             />
           </Col>
         </Row>
-        <Row className="d-flex align-items-center mb-4">
-          <Col>
+        <Row
+          className="d-flex align-items-center"
+          style={{ marginBottom: 100 }}
+        >
+          <Col xs={12} lg={6}>
             <Img
               src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/vision.jpg"
               alt="Viviendas de emergencia"
@@ -62,7 +71,10 @@ const Inicio = () => {
               calidad de vida con responsabilidad.
             </Article>
           </Col>
-          <Col>
+          <Col
+            xs={{ span: 12, order: 'first' }}
+            lg={{ span: 6, order: 'last' }}
+          >
             <Img
               src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/proposito.jpg"
               alt="Viviendas de emergencia"
@@ -80,9 +92,9 @@ interface ArticleProps {
 }
 
 const Article = ({ title, children }: ArticleProps) => (
-  <article>
-    <h2 className="text-center">{title}</h2>
-    <p className="px-lg-5">{children}</p>
+  <article className="mt-4 mx-3 mx-lg-5 px-lg-5">
+    <h2 className="mb-4 mb-lg-5">{title}</h2>
+    <p>{children}</p>
   </article>
 );
 
@@ -92,12 +104,11 @@ interface ImgProps {
 }
 
 const Img = ({ src, alt }: ImgProps) => (
-  <div>
+  <div className="mx-3">
     <img
-      className="w-100 p-lg-5"
+      className="w-100 rounded"
       src={src}
       alt={alt}
-      style={{ height: '300px', objectFit: 'cover' }}
     />
   </div>
 );
