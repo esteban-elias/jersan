@@ -8,17 +8,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Route,
   RouterProvider,
-  Routes,
   createBrowserRouter,
-  createRoutesFromElements,
+  createRoutesFromElements
 } from 'react-router-dom';
 import './App.css';
 import Contacto from './components/Contacto';
 import Inicio from './components/Inicio';
-import Nosotros from './components/Nosotros';
-import Productos from './components/Productos';
 import ModeloNegocio from './components/ModeloNegocio';
+import Nosotros from './components/Nosotros';
 import NotFound from './components/NotFound';
+import Productos from './components/Productos';
 import RootLayout from './components/RootLayout';
 
 library.add(faEnvelope, faMapMarkerAlt, faPhoneAlt);

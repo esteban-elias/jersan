@@ -1,11 +1,11 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-white mt-4 pt-4">
+    <footer className="bg-dark text-white mt-5 pt-5">
       <Container>
         <Row>
           <Col className="d-flex flex-column align-items-center">

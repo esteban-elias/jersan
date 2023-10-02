@@ -1,12 +1,13 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Map, Marker } from 'pigeon-maps';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Map, Marker } from 'pigeon-maps';
 import useImagePreloader from '../hooks/useImagePreloader';
 import Loading from './Loading';
+import PortadaImg from './PortadaImg';
 
 const Contacto = () => {
   const isLoading = useImagePreloader([
@@ -14,15 +15,14 @@ const Contacto = () => {
   ]);
 
   if (isLoading) {
-    return <Loading/>
+    return <Loading />;
   }
 
   return (
     <>
-      <img
-        className="w-100 mb-4"
+      <PortadaImg
         src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/contacto/portada.png"
-        alt="Equipo de trabajo"
+        alt="portada página contacto"
       />
       <Container>
         <Row className="mb-4">
@@ -30,8 +30,8 @@ const Contacto = () => {
             <h1 className="text-center">Contacto</h1>
           </Col>
         </Row>
-        <Row>
-          <Col>
+        <Row xs={1} lg={2}>
+          <Col className='mb-5 mb-lg-0'>
             <Form>
               <Form.Group className="mb-3" controlId="formularioNombre">
                 <Form.Label>Nombre</Form.Label>

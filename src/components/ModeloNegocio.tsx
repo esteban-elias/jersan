@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import useImagePreloader from '../hooks/useImagePreloader';
 import Loading from './Loading';
+import PortadaImg from './PortadaImg';
 
 const ModeloNegocio = () => {
   const isLoading = useImagePreloader([
@@ -16,18 +17,17 @@ const ModeloNegocio = () => {
 
   return (
     <>
-      <img
-        className="w-100 mb-4"
+      <PortadaImg
         src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/modelo-negocio/portada.png"
-        alt="Equipo de trabajo"
+        alt="portada página modelo de negocio"
       />
       <Container>
-        <Row className="mb-4">
+        <Row id='row-modelo-canvas'>
           <Col>
             <img
-              className="w-100"
+              className="w-100 rounded"
               src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/modelo-negocio/canvas.png"
-              alt="modelo-de-negocios-canvas"
+              alt="modelo de negocios canvas"
             />
           </Col>
         </Row>
@@ -43,10 +43,10 @@ const ModeloNegocio = () => {
 
 const ObjetivosSection = () => (
   <section>
-    <h3>Objetivos Estratégicos (OE)</h3>
-    <ul>
-      <li>
-        <h4>OE1</h4>
+    <h3 className='mb-4'>Objetivos Estratégicos (OE)</h3>
+    <ul className='mb-5'>
+      <li className='mb-4'>
+        <h4 className='mb-3'>OE1</h4>
         <p>
           <strong>Diseñar</strong> y <strong>componer</strong> viviendas
           de emergencia y viviendas sociales innovadoras y sostenibles
@@ -54,8 +54,8 @@ const ObjetivosSection = () => (
           solución habitacinal rápida.
         </p>
       </li>
-      <li>
-        <h4>OE2</h4>
+      <li className='mb-4'>
+        <h4 className='mb-3'>OE2</h4>
         <p>
           <strong>Establecer</strong> y <strong>fortalecer</strong>{' '}
           alianzas estratégicas con donantes, entidades gubernamentales,
@@ -63,8 +63,8 @@ const ObjetivosSection = () => (
           de recursos.
         </p>
       </li>
-      <li>
-        <h4>OE3</h4>
+      <li className='mb-4'>
+        <h4 className='mb-3'>OE3</h4>
         <p>
           <strong>Promover</strong> y <strong>expandir</strong> la
           visibilidad de la empresa a través de redes sociales y canales
@@ -72,8 +72,8 @@ const ObjetivosSection = () => (
           clientes identificados.
         </p>
       </li>
-      <li>
-        <h4>OE4</h4>
+      <li className='mb-4'>
+        <h4 className='mb-3'>OE4</h4>
         <p>
           <strong>Garantizar</strong> un proceso de construcción y
           entrega eficiente y de alta calidad a través de una continua
@@ -82,10 +82,10 @@ const ObjetivosSection = () => (
       </li>
     </ul>
 
-    <h3>Objetivos Específicos (basados en OE)</h3>
+    <h3 className='mb-4'>Objetivos Específicos (basados en OE)</h3>
     <ul>
-      <li>
-        <h4>Para OE1</h4>
+      <li className='mb-4'>
+        <h4 className='mb-3'>Para OE1</h4>
         <ol>
           <li>
             <p>
@@ -102,8 +102,8 @@ const ObjetivosSection = () => (
           </li>
         </ol>
       </li>
-      <li>
-        <h4>Para OE2</h4>
+      <li className='mb-4'>
+        <h4 className='mb-3'>Para OE2</h4>
         <ol>
           <li>
             <p>
@@ -121,8 +121,8 @@ const ObjetivosSection = () => (
           </li>
         </ol>
       </li>
-      <li>
-        <h4>Para OE3</h4>
+      <li className='mb-4'>
+        <h4 className='mb-3'>Para OE3</h4>
         <ol>
           <li>
             <p>
@@ -141,7 +141,7 @@ const ObjetivosSection = () => (
         </ol>
       </li>
       <li>
-        <h4>Para OE4</h4>
+        <h4 className='mb-3'>Para OE4</h4>
         <ol>
           <li>
             <p>

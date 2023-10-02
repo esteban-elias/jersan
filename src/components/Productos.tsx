@@ -1,10 +1,12 @@
+import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import useImagePreloader from '../hooks/useImagePreloader';
 import Loading from './Loading';
+import PortadaImg from './PortadaImg';
+import { truncateText } from './utils/utils';
 
 const Productos = () => {
   const isLoading = useImagePreloader([
@@ -20,53 +22,49 @@ const Productos = () => {
 
   return (
     <>
-      <img
-        className="w-100 mb-4"
+      <PortadaImg
         src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/portada.png"
-        alt="Equipo de trabajo"
+        alt="portada página productos"
       />
       <Container>
-        <Row className="mb-3">
+        <Row className="mb-4 mb-lg-5">
           <Col>
             <h1 className="text-center">Enfoque</h1>
           </Col>
         </Row>
-        <Row className="mb-5">
-          <Col className="mb-3 mb-sm-0">
-            <CustomCard
+        <Row className="mb-5" xs={1} md={3}>
+          <Col className="mb-5 px-5 px-md-2 px-lg-4">
+            <EnfoqueCard
               title="Reciclaje"
               imgSrc="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/reciclaje.jpg"
             >
               El reciclaje es esencial para reducir residuos, conservar
               recursos y proteger el medio ambiente, impulsando un
               futuro sostenible.
-            </CustomCard>
+            </EnfoqueCard>
           </Col>
-          <Col className="mb-3 mb-sm-0">
-            <CustomCard
+          <Col className="mb-5 px-5 px-md-2 px-lg-4">
+            <EnfoqueCard
               title="Equidad de género"
               imgSrc="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/equidad-genero.jpg"
             >
-              La economía circular en techos en Chile promueve la
-              reutilización y el reciclaje, integrando energía
-              renovable. Involucrar a mujeres potencia productividad e
-              innovación en la empresa.
-            </CustomCard>
+              Involucrar mujeres incrementa productividad e innovación,
+              siendo esencial para el crecimiento empresarial
+              equitativo.
+            </EnfoqueCard>
           </Col>
-          <Col className="mb-3 mb-sm-0">
-            <CustomCard
+          <Col className="mb-5 px-5 px-md-2 px-lg-4">
+            <EnfoqueCard
               title="Capital humano"
               imgSrc="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/capital-humano.jpg"
             >
-              La gestión adecuada de capital humano en la construcción
-              implica una planificación eficiente, considerando recursos
-              y plazos, garantizando seguridad y bienestar del equipo.
-              Es esencial para el éxito de los proyectos y la
-              productividad del personal.
-            </CustomCard>
+              Una gestión eficaz y bien planificada del capital humano
+              asegura la seguridad y bienestar del equipo, potenciando
+              así el éxito.
+            </EnfoqueCard>
           </Col>
         </Row>
-        <Row className="mb-3">
+        <Row className="mb-4 mb-lg-5">
           <Col>
             <h1 className="text-center">Proyectos</h1>
           </Col>
@@ -76,30 +74,27 @@ const Productos = () => {
           imgSrc="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/pedro-aguirre-cerda.jpg"
           alt="Proyecto Pedro Aguirre Cerda"
         >
-          El trabajo en la calle Pedro Aguirre Cerda condujo a un
-          desafío de ingeniería mayor. El objetivo era mejorar la
-          eficiencia de la recolección de residuos en la calle. Para
-          ello, se diseñó un sistema de recolección de residuos que
-          consiste en un camión recolector de residuos y un sistema de
-          contenedores de residuos.
+          El proyecto en la calle Pedro Aguirre Cerda representó un gran
+          reto de ingeniería con el objetivo de optimizar la recolección
+          de residuos.
         </ProyectoRow>
       </Container>
     </>
   );
 };
 
-interface LittleCardProps {
+interface EnfoqueCardProps {
   title: string;
   imgSrc: string;
   children: React.ReactNode;
 }
 
-const CustomCard = ({ children, title, imgSrc }: LittleCardProps) => {
+const EnfoqueCard = ({ children, title, imgSrc }: EnfoqueCardProps) => {
   return (
-    <Card className="mx-5 rounded-0 shadow">
-      <Card.Img className="rounded-0" variant="top" src={imgSrc} />
+    <Card className="shadow">
+      <Card.Img className="mb-3" variant="top" src={imgSrc} />
       <Card.Body>
-        <Card.Title>{title}</Card.Title>
+        <Card.Title className="mb-3">{title}</Card.Title>
         <Card.Text>{children}</Card.Text>
       </Card.Body>
     </Card>
@@ -110,7 +105,7 @@ interface ProyectoRowProps {
   title: string;
   imgSrc: string;
   alt: string;
-  children: React.ReactNode;
+  children: string;
 }
 
 const ProyectoRow = ({
@@ -120,28 +115,36 @@ const ProyectoRow = ({
   children,
 }: ProyectoRowProps) => {
   return (
-    <Card>
-      <Card.Body>
-        <Row>
-          <Col xs={12} sm={6}>
-            <img className="w-100 mb-2 " alt={alt} src={imgSrc} />
-          </Col>
-          <Col
-            xs={12}
-            sm={6}
-            className="d-flex flex-column justify-content-center p-sm-5"
-          >
-            <Card.Title className="text-center mb-2">
-              {title}
-            </Card.Title>
-            <Card.Text>{children}</Card.Text>
-            <div className="text-center">
-              <Button>Detalles</Button>
-            </div>
-          </Col>
-        </Row>
-      </Card.Body>
-    </Card>
+    <Row className="mb-5">
+      <Col>
+        <Card className="card-proyectos">
+          <Row xs={1} md={2}>
+            <Col className="mb-4 mb-lg-0">
+              <Card.Img
+                src={imgSrc}
+                alt={alt}
+                className="card-img-proyectos"
+              />
+            </Col>
+            <Col className="d-flex flex-column justify-content-center">
+              <div>
+                <Card.Body className="mx-4 mx-lg-5 px-lg-5">
+                  <Card.Title className="mb-4 mb-md-3 mb-lg-4">
+                    {title}
+                  </Card.Title>
+                  <Card.Text className="mb-4 mb-md-2 mb-lg-4">
+                    {truncateText(children, 22)}
+                  </Card.Text>
+                  <div className="text-center">
+                    <Button>Detalles</Button>
+                  </div>
+                </Card.Body>
+              </div>
+            </Col>
+          </Row>
+        </Card>
+      </Col>
+    </Row>
   );
 };
 

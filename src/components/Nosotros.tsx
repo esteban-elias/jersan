@@ -5,6 +5,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
 import useImagePreloader from '../hooks/useImagePreloader';
 import Loading from './Loading';
+import PortadaImg from './PortadaImg';
 
 const enum Item {
   Valores = 'valores',
@@ -25,15 +26,14 @@ const Nosotros = () => {
 
   return (
     <>
-      <img
-        className="w-100 mb-4"
+      <PortadaImg
         src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/nosotros/portada.png"
-        alt="Equipo de trabajo"
+        alt="portada página nosotros"
       />
-      <Container>
-        <Row>
-          <Col lg={4} className="d-flex justify-content-center mb-3">
-            <ListGroup variant="flush" className="w-50 mb-3">
+      <Container id="container-nosotros">
+        <Row className="g-0">
+          <Col lg={4} className="d-flex justify-content-center mb-5">
+            <ListGroup horizontal id="list-group-nosotros">
               <ListItem
                 item={Item.Valores}
                 activeItem={activeItem}
@@ -99,9 +99,13 @@ const ListItem = ({
   );
 };
 
+const Article = ({ children }: { children: React.ReactNode }) => (
+  <article className="pe-lg-5 me-lg-5">{children}</article>
+);
+
 const ValoresArticle = () => (
-  <article>
-    <h2 className="mb-3">Valores</h2>
+  <Article>
+    <h2 className="mb-4">Valores</h2>
     <p>
       En el corazón de nuestra constructora de viviendas de emergencia
       reside una misión profunda: ayudar a las personas sin hogar. No
@@ -128,12 +132,12 @@ const ValoresArticle = () => (
       importancia de nuestro trabajo en las vidas de aquellos que
       servimos.
     </p>
-  </article>
+  </Article>
 );
 
 const CoreBusinessArticle = () => (
-  <article>
-    <h2 className="mb-3">Core Business</h2>
+  <Article>
+    <h2 className="mb-4">Core Business</h2>
     <p>
       En el epicentro de nuestra misión se encuentra una promesa doble:{' '}
       <strong>Construir y Conservar</strong>. Creamos estructuras que se
@@ -153,12 +157,12 @@ const CoreBusinessArticle = () => (
       de <strong>impulsar un futuro sostenible</strong> donde las
       viviendas y la naturaleza coexistan en armonía.
     </p>
-  </article>
+  </Article>
 );
 
 const VentajasCompetitivasArticle = () => (
-  <article>
-    <h2 className="mb-3">Ventajas Competitivas</h2>
+  <Article>
+    <h2 className="mb-4">Ventajas Competitivas</h2>
     <p>
       Nos distinguimos en el mercado gracias a la{' '}
       <strong>rica experiencia y conocimiento especializado</strong> de
@@ -184,7 +188,7 @@ const VentajasCompetitivasArticle = () => (
       , un atributo esencial que resuena con clientes conscientes de la
       responsabilidad ambiental.
     </p>
-  </article>
+  </Article>
 );
 
 const activeItemStyle = {

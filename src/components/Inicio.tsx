@@ -1,12 +1,14 @@
+import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import useImagePreloader from '../hooks/useImagePreloader';
 import Loading from './Loading';
+import PortadaImg from './PortadaImg';
 
 const Inicio = () => {
   const isLoading = useImagePreloader([
     'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/portada.png',
+    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/mision.jpg',
   ]);
 
   if (isLoading) {
@@ -15,10 +17,9 @@ const Inicio = () => {
 
   return (
     <>
-      <img
-        className="w-100 mb-5"
+      <PortadaImg
         src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/portada.png"
-        alt="Viviendas de emergencia"
+        alt="portada página inicio"
       />
       <Container>
         <Row
@@ -39,7 +40,7 @@ const Inicio = () => {
           >
             <Img
               src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/mision.jpg"
-              alt="Viviendas de emergencia"
+              alt="mision de la empresa"
             />
           </Col>
         </Row>
@@ -50,7 +51,7 @@ const Inicio = () => {
           <Col xs={12} lg={6}>
             <Img
               src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/vision.jpg"
-              alt="Viviendas de emergencia"
+              alt="visión de la empresa"
             />
           </Col>
           <Col>
@@ -77,7 +78,7 @@ const Inicio = () => {
           >
             <Img
               src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/proposito.jpg"
-              alt="Viviendas de emergencia"
+              alt="propósito de la empresa"
             />
           </Col>
         </Row>
@@ -92,7 +93,7 @@ interface ArticleProps {
 }
 
 const Article = ({ title, children }: ArticleProps) => (
-  <article className="mt-4 mx-3 mx-lg-5 px-lg-5">
+  <article className="mx-3 mx-lg-5 px-lg-5">
     <h2 className="mb-4 mb-lg-5">{title}</h2>
     <p>{children}</p>
   </article>
@@ -104,12 +105,8 @@ interface ImgProps {
 }
 
 const Img = ({ src, alt }: ImgProps) => (
-  <div className="mx-3">
-    <img
-      className="w-100 rounded"
-      src={src}
-      alt={alt}
-    />
+  <div className="mx-3 mb-4">
+    <img className="w-100 rounded" src={src} alt={alt} />
   </div>
 );
 
