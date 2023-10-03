@@ -107,7 +107,7 @@ interface ImgProps {
 
 const Img = ({ src, alt }: ImgProps) => (
   <div className="mx-3 mb-4">
-    <img className="w-100 rounded" src={src} alt={alt} />
+    <img className="w-100 rounded shadow" src={src} alt={alt} />
   </div>
 );
 
