@@ -11,7 +11,7 @@ import PortadaImg from './PortadaImg';
 
 const Contacto = () => {
   const isLoading = useImagePreloader([
-    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/contacto/portada.png',
+    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/contacto/portada.jpg',
   ]);
 
   if (isLoading) {
@@ -21,17 +21,18 @@ const Contacto = () => {
   return (
     <>
       <PortadaImg
-        src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/contacto/portada.png"
+        src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/contacto/portada.jpg"
         alt="portada página contacto"
+        text="Contacto"
       />
       <Container>
-        <Row className="mb-4">
+        <Row className="mb-4 mb-lg-5">
           <Col>
-            <h1 className="text-center">Contacto</h1>
+            <h2 className="text-center">Nos encantaría escucharte</h2>
           </Col>
         </Row>
         <Row xs={1} lg={2}>
-          <Col className='mb-5 mb-lg-0'>
+          <Col className="mb-5 mb-lg-0">
             <Form>
               <Form.Group className="mb-3" controlId="formularioNombre">
                 <Form.Label>Nombre</Form.Label>

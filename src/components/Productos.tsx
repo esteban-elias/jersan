@@ -10,7 +10,7 @@ import { truncateText } from './utils/utils';
 
 const Productos = () => {
   const isLoading = useImagePreloader([
-    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/portada.png',
+    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/portada.jpg',
     'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/reciclaje.jpg',
     'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/equidad-genero.jpg',
     'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/capital-humano.jpg',
@@ -23,13 +23,14 @@ const Productos = () => {
   return (
     <>
       <PortadaImg
-        src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/portada.png"
+        src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/productos/portada.jpg"
         alt="portada página productos"
+        text='Productos'
       />
       <Container>
         <Row className="mb-4 mb-lg-5">
           <Col>
-            <h1 className="text-center">Enfoque</h1>
+            <h2 className="text-center">Enfoque</h2>
           </Col>
         </Row>
         <Row className="mb-5" xs={1} md={3}>
@@ -66,7 +67,7 @@ const Productos = () => {
         </Row>
         <Row className="mb-4 mb-lg-5">
           <Col>
-            <h1 className="text-center">Proyectos</h1>
+            <h2 className="text-center">Proyectos</h2>
           </Col>
         </Row>
         <ProyectoRow

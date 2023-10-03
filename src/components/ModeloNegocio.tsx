@@ -7,7 +7,7 @@ import PortadaImg from './PortadaImg';
 
 const ModeloNegocio = () => {
   const isLoading = useImagePreloader([
-    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/modelo-negocio/portada.png',
+    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/modelo-negocio/portada.jpg',
     'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/modelo-negocio/canvas.png',
   ]);
 
@@ -18,8 +18,9 @@ const ModeloNegocio = () => {
   return (
     <>
       <PortadaImg
-        src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/modelo-negocio/portada.png"
+        src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/modelo-negocio/portada.jpg"
         alt="portada página modelo de negocio"
+        text='Modelo de Negocio'
       />
       <Container>
         <Row id='row-modelo-canvas'>

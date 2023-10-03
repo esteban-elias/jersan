@@ -17,7 +17,7 @@ const Nosotros = () => {
   const [activeItem, setActiveItem] = useState(Item.Valores);
 
   const isLoading = useImagePreloader([
-    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/nosotros/portada.png',
+    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/nosotros/portada.jpg',
   ]);
 
   if (isLoading) {
@@ -27,8 +27,9 @@ const Nosotros = () => {
   return (
     <>
       <PortadaImg
-        src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/nosotros/portada.png"
+        src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/nosotros/portada.jpg"
         alt="portada página nosotros"
+        text='Nosotros'
       />
       <Container id="container-nosotros">
         <Row className="g-0">

@@ -7,7 +7,7 @@ import PortadaImg from './PortadaImg';
 
 const Inicio = () => {
   const isLoading = useImagePreloader([
-    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/portada.png',
+    'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/portada.jpg',
     'https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/mision.jpg',
   ]);
 
@@ -18,8 +18,9 @@ const Inicio = () => {
   return (
     <>
       <PortadaImg
-        src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/portada.png"
+        src="https://esteban-elias.s3.sa-east-1.amazonaws.com/jersan/public/inicio/portada.jpg"
         alt="portada página inicio"
+        text='Construcción Rápida. Paz Duradera'
       />
       <Container>
         <Row
