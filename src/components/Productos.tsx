@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 import useImagePreloader from '../hooks/useImagePreloader';
 import Loading from './Loading';
 import PortadaImg from './PortadaImg';
-import { truncateText } from './utils/utils';
+import { truncateText } from '../utils/utils';
 
 const Productos = () => {
   const isLoading = useImagePreloader([
